@@ -2083,7 +2083,7 @@ function Books() {
         doiLink: "https://doi.org/10.4018/979-8-3693-6705-6.ch001",
         isbn: "9798369367070, 9798369367056",
         coAuthors: "K.P. Kshirsagar; A. Ingle",
-        scopusLink: "https://www.scopus.com/record/display.uri?eid=2-s2.0-1234567890",
+        scopusLink: "https://www.scopus.com/record/display.uri?eid=2-s2.0-85218055676",
         crossrefLink: "",
       },
       {
@@ -2096,7 +2096,7 @@ function Books() {
         doiLink: "",
         isbn: "9798895303986, 9798895302606",
         coAuthors: "O. Bagaria; S. Mohammed; R. Kamalraj; A. Ingle",
-        scopusLink: "https://www.scopus.com/record/display.uri?eid=2-s2.0-2345678901",
+        scopusLink: "https://www.scopus.com/pages/publications/86000193063",
         crossrefLink: "",
       },
       {
@@ -2109,7 +2109,7 @@ function Books() {
         doiLink: "https://doi.org/10.4018/979-8-3693-7560-0.ch004",
         isbn: "9798369375600, 9798369375624",
         coAuthors: "A.W. Ingle; K.P. Kshirsagar; P.G. Gawande",
-        scopusLink: "https://www.scopus.com/record/display.uri?eid=2-s2.0-3456789012",
+        scopusLink: "https://www.scopus.com/pages/publications/105005127645",
         crossrefLink: "https://doi.org/10.4018/979-8-3693-7560-0.ch004",
       },
     ].map((book, index) => (
