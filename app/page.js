@@ -1709,6 +1709,23 @@ function Conferences() {
   const [openIndex, setOpenIndex] = useState(null);
 
 const conferences = [
+    {
+    title: "Intrusion Detection for ICMP-Flood Attack",
+    authors: "A. W. Ingle, Mohnish Awade",
+    event: "2nd National Conference on Computer Communication and Information Technology (NC3IT-2013)",
+    details: "Sinhgad Institute of Computer Science, Pandharpur, India, 15-16 Feb 2013",
+    link: "",
+    type: "national",
+  },
+  {
+    title: "Intrusion Detection for TCP-SYNC Flood Attack",
+    authors: "A. W. Ingle, Mohnish Awade",
+    event: "National Conference on Networks & Soft Computing (NCNSC-13)",
+    details: "Department of CSE, Vignan University, Vadlamudi, Guntur, India, 25-26 Mar 2013. Sponsored by DST, Govt. of India and technically sponsored by IJARCS, ISTE",
+    link: "",
+    type: "national",
+  },
+
   {
     title: "Computational Intelligence based Intrusion Detection Systems for Wireless Communication and Pervasive Computing Networks",
     authors: "Abhishek Gupta, Om Jee Pandey, Mahendra Shukla, Anjali Dadhich, Samar Mathur, Anup Ingle",
