@@ -1709,14 +1709,14 @@ function Conferences() {
   const [openIndex, setOpenIndex] = useState(null);
 
 const conferences = [
-  // {
-  //   title: "Computational Intelligence based Intrusion Detection Systems for Wireless Communication and Pervasive Computing Networks",
-  //   authors: "Abhishek Gupta, Om Jee Pandey, Mahendra Shukla, Anjali Dadhich, Samar Mathur, Anup Ingle",
-  //   event: "IEEE International Conference on Computational Intelligence and Computing Research (ICCICR 2013)",
-  //   details: "Enathi, India, 2013, pp. 1-7, doi: 10.1109/ICCIC.2013.6724156",
-  //   link: "https://ieeexplore.ieee.org/document/6724156",
-  //   type: "international",
-  // },
+  {
+    title: "Computational Intelligence based Intrusion Detection Systems for Wireless Communication and Pervasive Computing Networks",
+    authors: "Abhishek Gupta, Om Jee Pandey, Mahendra Shukla, Anjali Dadhich, Samar Mathur, Anup Ingle",
+    event: "IEEE International Conference on Computational Intelligence and Computing Research (ICCICR 2013)",
+    details: "Enathi, India, 2013, pp. 1-7, doi: 10.1109/ICCIC.2013.6724156",
+    link: "https://ieeexplore.ieee.org/document/6724156",
+    type: "international",
+  },
   {
     title: "Intelligent Perpetual Echo Attack Detection on User Datagram Protocol Port 7 Using Ant Colony Optimization",
     authors: "Abhishek Gupta; Om Jee Pandey; Mahendra Shukla; Anjali Dadhich; Anup Ingle; Vishal Ambhore",
@@ -1731,6 +1731,38 @@ const conferences = [
     event: "International Conference on Issues and Challenges in Intelligent Computing Techniques (ICICT 2014)",
     details: "Ghaziabad, India, 2014, pp. 64-69, doi: 10.1109/ICICICT.2014.6781254",
     link: "https://ieeexplore.ieee.org/document/6781254",
+    type: "international",
+  },
+  {
+    title: "ICMP Denial of Service (DoS) Attack Detection System",
+    authors: "Sanket Lokhande, Anup Ingle, Nilshree Damani, Aditi Mallavarapu, Mohnish Awade, Piyush Mathurkar",
+    event: "International Conference on Science and Technology (ICST-2K14)",
+    details: "S B Patil College of Engineering, Indapur, Pune, India, 21-22 Feb 2014",
+    link: "",
+    type: "international",
+  },
+  {
+    title: "Update on Next Generation Network Attack: A Review Paper on Network Attacks Classified into Mobile & Computer Base",
+    authors: "Ansari Mohsin Jaweed Ahmed, Shaikh Mohd Rehan, Anup Ingle, Sanket Lokhande, Rohan Saswadkar",
+    event: "International Conference on Electrical, Electronics and Computer Science Engineering (ICEESCE 2015)",
+    details: "Pune, India, 25 Jan 2015, ISBN: 978-2-642-24819-2",
+    link: "",
+    type: "international",
+  },
+  {
+    title: "Smart Parking System",
+    authors: "Anup Ingle, Ashutosh Pathrabe, Tukaram Panchal, Rajat Pandharpurkar",
+    event: "International Conference on Recent Trends in Engineering and Technology (VISHWACON 2016-17)",
+    details: "VIIT Pune, India, 17-18 Feb 2017, ISBN: 978-93-85665-68-4",
+    link: "",
+    type: "international",
+  },
+  {
+    title: "Hardware Entity for Anomaly Detection of Network Traffic",
+    authors: "Anup Ingle, Rishabh Rodkar, Makarand Potdar, Akshay K. Kalbhor",
+    event: "International Conference on Recent Trends in Engineering and Technology (VISHWACON 2016-17)",
+    details: "VIIT Pune, India, 17-18 Feb 2017, ISBN: 978-93-85665-68-4",
+    link: "",
     type: "international",
   },
   {
@@ -1749,14 +1781,14 @@ const conferences = [
     link: "https://ieeexplore.ieee.org/document/10275908",
     type: "international",
   },
-  // {
-  //   title: "Analyzing Convolutional Neural Networks as Feature Extractors for Video Regression",
-  //   authors: "S. Jain, R. Ghotekar, A. Dawande, A. Pawar, A. W. Ingle, V. M. Marathe",
-  //   event: "7th International Conference on Computing, Communication, Control and Automation (ICCUBEA 2023)",
-  //   details: "Pune, India, 2023, pp. 1-5, doi: 10.1109/ICCUBEA58933.2023.10392012",
-  //   link: "https://ieeexplore.ieee.org/document/10392012",
-  //   type: "international",
-  // },
+  {
+    title: "Analyzing Convolutional Neural Networks as Feature Extractors for Video Regression",
+    authors: "S. Jain, R. Ghotekar, A. Dawande, A. Pawar, A. W. Ingle, V. M. Marathe",
+    event: "7th International Conference on Computing, Communication, Control and Automation (ICCUBEA 2023)",
+    details: "Pune, India, 2023, pp. 1-5, doi: 10.1109/ICCUBEA58933.2023.10392012",
+    link: "https://ieeexplore.ieee.org/document/10392012",
+    type: "international",
+  },
   {
     title: "Improving UHVDC Wall Bearings Electric Reliability: Grading Ring Optimization and Field Investigation",
     authors: "Prashant Kumar; D. Anandhasilambarasan; Brijesh Kumar; P. Karthigaikumar; Anup Ingle",
@@ -1781,7 +1813,72 @@ const conferences = [
     link: "https://ieeexplore.ieee.org/document/10331771",
     type: "international",
   },
+  {
+    title: "Web Scraping-Based Cryptocurrency Prediction and Analysis",
+    authors: "Dhawal Thombare; Atharva Khadake; Rameshwar Kumbhar; Anup Ingle; M.S. Deshmukh; Manish Wadhwani",
+    event: "2025 3rd International Conference on Intelligent Data Communication Technologies and Internet of Things (IDCIoT)",
+    details: "Bengaluru, India, 2025, doi: 10.1109/IDCIOT64235.2025.10915045",
+    link: "https://ieeexplore.ieee.org/document/10915045",
+    type: "international",
+  },
+  {
+    title: "The Cram of Network Safety with its Sharp Attacks and Protective Measures",
+    authors: "Sakshi Deshpande; Aniket Devare; Malhar Dhakulkar; Anup Ingle; Srinivas Chippalkatti; Arati Deshpande",
+    event: "2025 1st International Conference on AIML-Applications for Engineering & Technology (ICAET)",
+    details: "Pune, India, 2025, doi: 10.1109/ICAET63349.2025.10932286",
+    link: "https://ieeexplore.ieee.org/document/10932286",
+    type: "international",
+  },
+  {
+    title: "Neighborhood Selection for Secure and Efficient Data Transmission in Wireless Sensor Network",
+    authors: "Lakshya Swarup; Latha B; Hitesh Kalra; Hannah Jessie Rani R; Anup Ingle; G. Premananthan",
+    event: "2024 IEEE 4th International Conference on ICT in Business Industry & Government (ICTBIG)",
+    details: "Indore, India, 2025, doi: 10.1109/ICTBIG64922.2024.10911192",
+    link: "https://ieeexplore.ieee.org/document/10911192",
+    type: "international",
+  },
+  {
+    title: "Enhancing Cyber Security Against DDoS Attacks: A Comprehensive Review and Future Directions",
+    authors: "Smruti Jagtap; Vikrant Kavitkar; Mahek Jain; Anup Ingle; Jayashree P. Tamkhade; Ketki Kshirsagar",
+    event: "2025 1st International Conference on AIML-Applications for Engineering & Technology (ICAET)",
+    details: "Pune, India, 2025, doi: 10.1109/ICAET63349.2025.10932273",
+    link: "https://ieeexplore.ieee.org/document/10932273",
+    type: "international",
+  },
+  {
+    title: "Real-Time Data Management in Embedded Systems Using a Circular Queue for Efficient Memory Utilization",
+    authors: "Pragati Patil; Atharva Joshi; Aryan Wale; Tanushri Rajput; Minal Deshmukh; Anup Ingle",
+    event: "2025 International Conference on Computational, Communication and Information Technology (ICCCIT)",
+    details: "Indore, India, 2025, doi: 10.1109/ICCCIT62592.2025.10928031",
+    link: "https://ieeexplore.ieee.org/document/10928031",
+    type: "international",
+  },
+  {
+    title: "Real-Time Supply Chain Management using Automation and Big Data in the Cloud",
+    authors: "Shweta Saxena; Mansi Kukreja; Anup Ingle; A. Thangamani; Rajeev Sharma; S Murugeswari",
+    event: "2024 15th International Conference on Computing Communication and Networking Technologies (ICCCNT)",
+    details: "Bhopal, India, 2025, doi: 10.1109/ICCCNT61001.2024.10724731",
+    link: "https://ieeexplore.ieee.org/document/10928031",
+    type: "international",
+  },
+  {
+    title: "Delving Into Virtual Ventures and The Growing Vi-Gnettes of Vehicular Innovations",
+    authors: "X. Mercilin Raajini; Lalit Khanna; Malathi H; Anup Ingle; G. R. Vijayshankar; Danish Kundra",
+    event: "2024 IEEE 2nd International Conference on Innovations in High Speed Communication and Signal Processing (IHCSP)",
+    details: "Kamand, India, 2025, doi: 10.1109/IHCSP63227.2024.10960022",
+    link: "https://ieeexplore.ieee.org/document/10960022",
+    type: "international",
+  },
+  {
+    title: "Enhancing Watershed Segmentation for Precise Mammogram Detection and Classification with the Application of Feedforward Neural Network Strategies",
+    authors: "S. Kannimuthu; Amritpal Sidhu; P. Chandrakala; Yuvraj Parmar; Shrishail B Sollapur; Anup Ingle",
+    event: "2024 IEEE 4th International Conference on ICT in Business Industry & Government (ICTBIG)",
+    details: "Indore, India, 2025, doi: 10.1109/ICTBIG64922.2024.10911243",
+    link: "https://ieeexplore.ieee.org/document/10911243",
+    type: "international",
+  },
 ];
+
 
 
 
