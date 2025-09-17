@@ -1899,6 +1899,7 @@ const conferences = [
 
 
 
+
   // Extract year from details text
   const extractYear = (details) => {
     const match = details.match(/(20\d{2}|19\d{2})/);
