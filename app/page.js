@@ -609,7 +609,7 @@ function AcademicPortfolio() {
         >
           {/* Google Scholar */}
           <a
-            href="https://scholar.google.com/citations?user=YOUR_ID"
+            href="https://scholar.google.com/citations?user=rz3NE4kAAAAJ&hl=en"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-8 py-3 bg-amber-600 text-white rounded-full text-lg font-semibold shadow hover:bg-amber-700 transition"

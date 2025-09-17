@@ -24,7 +24,7 @@ export default function Footer() {
           <h4 className="text-lg font-semibold text-white mb-3">Academic Resources</h4>
           <ul className="space-y-2 text-sm">
             {[
-              { href: '#Research', label: 'Google Scholar', icon: <SiGooglescholar size={16} className="mr-2 text-amber-200" /> },
+              { href: 'https://scholar.google.com/citations?user=rz3NE4kAAAAJ&hl=en', label: 'Google Scholar', icon: <SiGooglescholar size={16} className="mr-2 text-amber-200" /> },
               { href: 'https://www.scopus.com/authid/detail.uri?authorId=59007402600', label: 'Scopus', icon: <FaDatabase size={16} className="mr-2 text-amber-200" /> },
               { href: 'https://www.webofscience.com/wos/author/record/HLX-4154-2023', label: 'Web of Science', icon: <FaGlobe size={16} className="mr-2 text-amber-200" /> },
               { href: 'https://orcid.org/0000-0003-1159-9453 ', label: 'ORCID', icon: <SiOrcid size={16} className="mr-2 text-amber-200" /> }
