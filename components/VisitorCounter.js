@@ -4,14 +4,11 @@ const VisitorCounter = () => {
   const [count, setCount] = useState(null);
 
   useEffect(() => {
-  fetch("https://api.countapi.xyz/hit/www.anupingle.com/visits")
-    .then((res) => res.json())
-    .then((data) => {
-      console.log("Visitor API response:", data);
-      setCount(data.value);
-    })
-    .catch((err) => console.error("Error fetching visitors:", err));
-}, []);
+    fetch("https://hits.sh/www.anupingle.com.json?style=flat")
+      .then((res) => res.json())
+      .then((data) => setCount(data.count))
+      .catch((err) => console.error("Error fetching visitors:", err));
+  }, []);
 
   return (
     <div className="text-center text-sm text-gray-600">
@@ -24,4 +21,4 @@ const VisitorCounter = () => {
   );
 };
 
-export default VisitorCounter;
+export default VisitorCounter;
