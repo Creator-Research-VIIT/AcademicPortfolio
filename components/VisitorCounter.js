@@ -1,24 +1,25 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-const VisitorCounter = () => {
-  const [count, setCount] = useState(null);
-
+const GoogleAnalytics = () => {
   useEffect(() => {
-    fetch("https://hits.sh/www.anupingle.com.json")
-      .then((res) => res.json())
-      .then((data) => setCount(data.count))
-      .catch((err) => console.error("Error fetching visitors:", err));
+    // Load gtag.js script
+    const script1 = document.createElement("script");
+    script1.async = true;
+    script1.src = "https://www.googletagmanager.com/gtag/js?id=G-CN89Y7K7BV";
+    document.head.appendChild(script1);
+
+    // Init GA
+    const script2 = document.createElement("script");
+    script2.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CN89Y7K7BV');
+    `;
+    document.head.appendChild(script2);
   }, []);
 
-  return (
-    <div className="text-center text-sm text-gray-600">
-      {count !== null ? (
-        <p>Total Visitors: {count}</p>
-      ) : (
-        <p>Loading visitors...</p>
-      )}
-    </div>
-  );
+  return null; // no visible UI
 };
 
-export default VisitorCounter;
+export default GoogleAnalytics;
