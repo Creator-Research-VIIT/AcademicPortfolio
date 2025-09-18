@@ -278,15 +278,14 @@ export default function Home() {
               <h3 className="text-xl md:text-2xl font-semibold text-amber-900">Dr. Anup Ingle</h3>
               <p className="text-sm md:text-base text-gray-700">Assistant Professor, Department of E&TC, VIT, Pune, India</p>
               <div className="p-4">
-      <h1 className="text-xl font-bold mb-4">My Website</h1>
-      
-      {/* Use VisitorCounter here */}
-      <VisitorCounter />
-    </div>
+
+                {/* Use VisitorCounter here */}
+                <VisitorCounter />
+              </div>
             </div>
           </div>
 
-           
+
 
           {/* Text */}
           <div className="text-center md:text-left">
@@ -356,7 +355,7 @@ export default function Home() {
             technologies.
           </motion.p>
 
-        
+
 
           {/* Timeline */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20">
@@ -1385,41 +1384,40 @@ function Projects() {
     <div className="space-y-12">
       {/* Skills */}
       {/* Skills */}
-<div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-12 sm:mb-16">
-  {skills.map((skill, index) => (
-    <motion.div
-      key={index}
-      onClick={() => setSelectedSkill(skill)}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      className={`
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-12 sm:mb-16">
+        {skills.map((skill, index) => (
+          <motion.div
+            key={index}
+            onClick={() => setSelectedSkill(skill)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className={`
         cursor-pointer px-5 py-2 sm:px-7 sm:py-3 rounded-full shadow-md text-sm sm:text-base font-medium
         transition-all duration-300 relative
-        ${
-          selectedSkill === skill
-            ? "bg-gradient-to-r from-amber-500 to-yellow-400 text-white shadow-lg"
-            : "bg-yellow-100 text-amber-900 hover:bg-yellow-200 hover:shadow-lg"
-        }
+        ${selectedSkill === skill
+                ? "bg-gradient-to-r from-amber-500 to-yellow-400 text-white shadow-lg"
+                : "bg-yellow-100 text-amber-900 hover:bg-yellow-200 hover:shadow-lg"
+              }
       `}
-    >
-      {/* Decorative glow when active */}
-      {selectedSkill === skill && (
-        <span className="absolute inset-0 rounded-full ring-2 ring-amber-500 animate-pulse"></span>
-      )}
+          >
+            {/* Decorative glow when active */}
+            {selectedSkill === skill && (
+              <span className="absolute inset-0 rounded-full ring-2 ring-amber-500 animate-pulse"></span>
+            )}
 
-      <span className="relative z-10">{skill}</span>
-    </motion.div>
-  ))}
+            <span className="relative z-10">{skill}</span>
+          </motion.div>
+        ))}
 
-  {selectedSkill && (
-    <button
-      onClick={() => setSelectedSkill(null)}
-      className="ml-4 text-base font-semibold text-red-600 hover:text-red-800 underline"
-    >
-      ✕ Clear
-    </button>
-  )}
-</div>
+        {selectedSkill && (
+          <button
+            onClick={() => setSelectedSkill(null)}
+            className="ml-4 text-base font-semibold text-red-600 hover:text-red-800 underline"
+          >
+            ✕ Clear
+          </button>
+        )}
+      </div>
 
 
       {/* Projects */}
@@ -1508,112 +1506,112 @@ function Projects() {
 function JournalPubs() {
   const [openIndex, setOpenIndex] = useState(null);
 
-const publications = [
-  {
-    title: "Intrusion Detection for ICMP-Flood Attack",
-    authors: "Mohnish Awade, A. W. Ingle",
-    journal: "International Journal of Research in Computer Science & Information Technology (IJRCSIT)",
-    details: "ISSN: 2319-5010, Vol 1, Issue 1(A), 2013",
-    link: "https://ijrcsit.com/",
-    type: "international",
-  },
-  {
-    title: "Intrusion Detection for TCP-SYN Flood Attack",
-    authors: "Mohnish Awade, A. W. Ingle",
-    journal: "International Journal of Advanced Research in Computer Science (IJARCS)",
-    details: "Vol 4, No 5, 2013",
-    link: "https://ijarcs.info/index.php/Ijarcs/issue/view/47",
-    type: "international",
-  },
-  {
-    title: "Update on Next Generation Network Attacks — A review",
-    authors: "Ahmed; Shaikh; Ingle; et al.",
-    journal: "International Journal of Electrical, Electronics & Computer Systems (IJEECS)",
-    details: "ISSN: 2347-2820, Vol 3, Issue 4, 2015",
-    link: "https://ijecs.in/",
-    type: "international",
-  },
-  {
-    title: "Statistical Approaches For Network Anomaly Detection For UDP Spoofing",
-    authors: "A. Ingle et al.",
-    journal: "International Journal of Advanced Computational Engineering & Networking (IJACEN)",
-    details: "ISSN: 2320-2106, Vol 4, Issue 7, 2016",
-    link: "https://ijacen.iraj.in/",
-    type: "international",
-  },
-  {
-    title: "DDoS Attack Detection Algorithms Based on Pattern Classification & ML",
-    authors: "Anup Ingle",
-    journal: "Journal of University of Shanghai for Science & Technology (JUSST)",
-    details: "ISSN: 1007-6735, Vol 23, Issue 2, 2021",
-    link: "https://jusst.org/",
-    type: "international",
-  },
-  {
-    title: "Artificial intelligence-based classification performance evaluation in monophonic and polyphonic Indian classical instruments recognition with hybrid domain features amalgamation",
-    authors: "Abhijit V. Chitre, Kirti Wanjale, Aradhanaa Deshmukh, Shyamsunder P. Kosbatwar, Anup Ingle, Sheela Hundekari",
-    journal: "Journal of Information & Optimization Sciences (JIOS)",
-    details: "ISSN: 0252-2667 / 2169-0103, Vol 44, Issue 3, 2023",
-    link: "https://doi.org/10.47974/jios-1345",
-    type: "international",
-  },
-  {
-    title: "Intelligent Conversational Agents Based Custom Question Answering System",
-    authors: "N. Sakhare, J. Bangare, D. Ajalkar, G. Walunjkar, M. Borawake, A. Ingle",
-    journal: "International Journal of Intelligent Systems & Applications in Engineering (IJISAE)",
-    details: "ISSN: 2147-6799, Vol 11, Issue 6s, 2023",
-    link: "https://www.scopus.com/record/display.uri?eid=2-s2.0-85168152238",
-    type: "international",
-  },
-  {
-    title: "Smart Traffic: Integrating Machine Learning, and YOLO for Adaptive Traffic Management System",
-    authors: "N. Sakhare, M. Hedau, B. Gokul, O. Malpure, T. Shah, A. Ingle",
-    journal: "International Journal of Intelligent Systems & Applications in Engineering (IJISAE)",
-    details: "ISSN: 2147-6799, Vol 12, Issue 12s, 2024",
-    link: "https://www.scopus.com/record/display.uri?eid=2-s2.0-85185285108",
-    type: "international",
-  },
-  {
-    title: "Lightweight authenticated key management mechanism for enhanced data transmission in the Internet of Things framework",
-    authors: "R.V. Mahadik, S.C. Hembade, S.S. Sorte, D. Khubalkar, A. Ingle, S. Thorat",
-    journal: "Journal of Discrete Mathematical Sciences & Cryptography (JDMSC)",
-    details: "ISSN: 0972-0529, 2024",
-    link: "https://doi.org/10.47974/JDMSC-1960",
-    type: "international",
-  },
-  {
-    title: "Unified Institute Management System for Efficient Administration and Accurate Data Management",
-    authors: "Ketki Kshirsagar, Smita Bhagwat, Rajeshree Shinde, Alka Barhatte, Swati Patil, Anup Ingle",
-    journal: "Journal of Information Systems Engineering & Management (JISEM)",
-    details: "ISSN: 2468-4376, Vol 10, Issue 5s, 2025",
-    link: "https://jisem-journal.com/index.php/journal/article/view/769",
-    type: "international",
-  },
-  {
-    title: "Augmenting Robotic Navigation: An Analytical Examination of X-Y with Yaw Tolerance Modulations within ROS2 and the Dynamic Window Paradigm using fusion of Nav2 Stack with DWA Algorithm",
-    authors: "Pramod U. Chavan , Rahul S. Pol , Vijaya N. Aher , Amar B. Deshmukh , Ajay Talele , Anup Ingle",
-    journal: "Journal of Information Systems Engineering & Management (JISEM)",
-    details: "ISSN: 2468-4376, Vol 10, Issue 23s, March 2025",
-    link: "https://jisem-journal.com/index.php/journal/article/view/3695",
-    type: "international",
-  },
-  {
-    title: "Memory Efficient Summarization of Real-Time CCTV Surveillance System",
-    authors: "Amar B. Deshmukh, Vijaya N. Aher , Vidya More , Rahul S. Pol , Ajay Talele, Anup Ingle",
-    journal: "Journal of Information Systems Engineering & Management (JISEM)",
-    details: "ISSN: 2468-4376, Vol 10, Issue 23s, March 2025",
-    link: "https://jisem-journal.com/index.php/journal/article/view/3696",
-    type: "international",
-  },
-  {
-    title: "SolarGrowNet: Autonomous Greenhouse Monitoring and Control System for Gerbera",
-    authors: "Vijaya N. Aher, Vidya More, Rahul S. Pol, Amar B. Deshmukh, Sharad T. Jadhav, Anup Ingle",
-    journal: "Journal of Information Systems Engineering & Management (JISEM)",
-    details: "ISSN: 2468-4376, Vol 10, Issue 23s, March 2025",
-    link: "https://jisem-journal.com/index.php/journal/article/view/3699",
-    type: "international",
-  },
-];
+  const publications = [
+    {
+      title: "Intrusion Detection for ICMP-Flood Attack",
+      authors: "Mohnish Awade, A. W. Ingle",
+      journal: "International Journal of Research in Computer Science & Information Technology (IJRCSIT)",
+      details: "ISSN: 2319-5010, Vol 1, Issue 1(A), 2013",
+      link: "https://ijrcsit.com/",
+      type: "international",
+    },
+    {
+      title: "Intrusion Detection for TCP-SYN Flood Attack",
+      authors: "Mohnish Awade, A. W. Ingle",
+      journal: "International Journal of Advanced Research in Computer Science (IJARCS)",
+      details: "Vol 4, No 5, 2013",
+      link: "https://ijarcs.info/index.php/Ijarcs/issue/view/47",
+      type: "international",
+    },
+    {
+      title: "Update on Next Generation Network Attacks — A review",
+      authors: "Ahmed; Shaikh; Ingle; et al.",
+      journal: "International Journal of Electrical, Electronics & Computer Systems (IJEECS)",
+      details: "ISSN: 2347-2820, Vol 3, Issue 4, 2015",
+      link: "https://ijecs.in/",
+      type: "international",
+    },
+    {
+      title: "Statistical Approaches For Network Anomaly Detection For UDP Spoofing",
+      authors: "A. Ingle et al.",
+      journal: "International Journal of Advanced Computational Engineering & Networking (IJACEN)",
+      details: "ISSN: 2320-2106, Vol 4, Issue 7, 2016",
+      link: "https://ijacen.iraj.in/",
+      type: "international",
+    },
+    {
+      title: "DDoS Attack Detection Algorithms Based on Pattern Classification & ML",
+      authors: "Anup Ingle",
+      journal: "Journal of University of Shanghai for Science & Technology (JUSST)",
+      details: "ISSN: 1007-6735, Vol 23, Issue 2, 2021",
+      link: "https://jusst.org/",
+      type: "international",
+    },
+    {
+      title: "Artificial intelligence-based classification performance evaluation in monophonic and polyphonic Indian classical instruments recognition with hybrid domain features amalgamation",
+      authors: "Abhijit V. Chitre, Kirti Wanjale, Aradhanaa Deshmukh, Shyamsunder P. Kosbatwar, Anup Ingle, Sheela Hundekari",
+      journal: "Journal of Information & Optimization Sciences (JIOS)",
+      details: "ISSN: 0252-2667 / 2169-0103, Vol 44, Issue 3, 2023",
+      link: "https://doi.org/10.47974/jios-1345",
+      type: "international",
+    },
+    {
+      title: "Intelligent Conversational Agents Based Custom Question Answering System",
+      authors: "N. Sakhare, J. Bangare, D. Ajalkar, G. Walunjkar, M. Borawake, A. Ingle",
+      journal: "International Journal of Intelligent Systems & Applications in Engineering (IJISAE)",
+      details: "ISSN: 2147-6799, Vol 11, Issue 6s, 2023",
+      link: "https://www.scopus.com/record/display.uri?eid=2-s2.0-85168152238",
+      type: "international",
+    },
+    {
+      title: "Smart Traffic: Integrating Machine Learning, and YOLO for Adaptive Traffic Management System",
+      authors: "N. Sakhare, M. Hedau, B. Gokul, O. Malpure, T. Shah, A. Ingle",
+      journal: "International Journal of Intelligent Systems & Applications in Engineering (IJISAE)",
+      details: "ISSN: 2147-6799, Vol 12, Issue 12s, 2024",
+      link: "https://www.scopus.com/record/display.uri?eid=2-s2.0-85185285108",
+      type: "international",
+    },
+    {
+      title: "Lightweight authenticated key management mechanism for enhanced data transmission in the Internet of Things framework",
+      authors: "R.V. Mahadik, S.C. Hembade, S.S. Sorte, D. Khubalkar, A. Ingle, S. Thorat",
+      journal: "Journal of Discrete Mathematical Sciences & Cryptography (JDMSC)",
+      details: "ISSN: 0972-0529, 2024",
+      link: "https://doi.org/10.47974/JDMSC-1960",
+      type: "international",
+    },
+    {
+      title: "Unified Institute Management System for Efficient Administration and Accurate Data Management",
+      authors: "Ketki Kshirsagar, Smita Bhagwat, Rajeshree Shinde, Alka Barhatte, Swati Patil, Anup Ingle",
+      journal: "Journal of Information Systems Engineering & Management (JISEM)",
+      details: "ISSN: 2468-4376, Vol 10, Issue 5s, 2025",
+      link: "https://jisem-journal.com/index.php/journal/article/view/769",
+      type: "international",
+    },
+    {
+      title: "Augmenting Robotic Navigation: An Analytical Examination of X-Y with Yaw Tolerance Modulations within ROS2 and the Dynamic Window Paradigm using fusion of Nav2 Stack with DWA Algorithm",
+      authors: "Pramod U. Chavan , Rahul S. Pol , Vijaya N. Aher , Amar B. Deshmukh , Ajay Talele , Anup Ingle",
+      journal: "Journal of Information Systems Engineering & Management (JISEM)",
+      details: "ISSN: 2468-4376, Vol 10, Issue 23s, March 2025",
+      link: "https://jisem-journal.com/index.php/journal/article/view/3695",
+      type: "international",
+    },
+    {
+      title: "Memory Efficient Summarization of Real-Time CCTV Surveillance System",
+      authors: "Amar B. Deshmukh, Vijaya N. Aher , Vidya More , Rahul S. Pol , Ajay Talele, Anup Ingle",
+      journal: "Journal of Information Systems Engineering & Management (JISEM)",
+      details: "ISSN: 2468-4376, Vol 10, Issue 23s, March 2025",
+      link: "https://jisem-journal.com/index.php/journal/article/view/3696",
+      type: "international",
+    },
+    {
+      title: "SolarGrowNet: Autonomous Greenhouse Monitoring and Control System for Gerbera",
+      authors: "Vijaya N. Aher, Vidya More, Rahul S. Pol, Amar B. Deshmukh, Sharad T. Jadhav, Anup Ingle",
+      journal: "Journal of Information Systems Engineering & Management (JISEM)",
+      details: "ISSN: 2468-4376, Vol 10, Issue 23s, March 2025",
+      link: "https://jisem-journal.com/index.php/journal/article/view/3699",
+      type: "international",
+    },
+  ];
 
 
 
@@ -1718,193 +1716,193 @@ const publications = [
 function Conferences() {
   const [openIndex, setOpenIndex] = useState(null);
 
-const conferences = [
+  const conferences = [
     {
-    title: "Intrusion Detection for ICMP-Flood Attack",
-    authors: "A. W. Ingle, Mohnish Awade",
-    event: "2nd National Conference on Computer Communication and Information Technology (NC3IT-2013)",
-    details: "Sinhgad Institute of Computer Science, Pandharpur, India, 15-16 Feb 2013",
-    link: "",
-    type: "national",
-  },
-  {
-    title: "Intrusion Detection for TCP-SYNC Flood Attack",
-    authors: "A. W. Ingle, Mohnish Awade",
-    event: "National Conference on Networks & Soft Computing (NCNSC-13)",
-    details: "Department of CSE, Vignan University, Vadlamudi, Guntur, India, 25-26 Mar 2013. Sponsored by DST, Govt. of India and technically sponsored by IJARCS, ISTE",
-    link: "",
-    type: "national",
-  },
+      title: "Intrusion Detection for ICMP-Flood Attack",
+      authors: "A. W. Ingle, Mohnish Awade",
+      event: "2nd National Conference on Computer Communication and Information Technology (NC3IT-2013)",
+      details: "Sinhgad Institute of Computer Science, Pandharpur, India, 15-16 Feb 2013",
+      link: "",
+      type: "national",
+    },
+    {
+      title: "Intrusion Detection for TCP-SYNC Flood Attack",
+      authors: "A. W. Ingle, Mohnish Awade",
+      event: "National Conference on Networks & Soft Computing (NCNSC-13)",
+      details: "Department of CSE, Vignan University, Vadlamudi, Guntur, India, 25-26 Mar 2013. Sponsored by DST, Govt. of India and technically sponsored by IJARCS, ISTE",
+      link: "",
+      type: "national",
+    },
 
-  {
-    title: "Computational Intelligence based Intrusion Detection Systems for Wireless Communication and Pervasive Computing Networks",
-    authors: "Abhishek Gupta, Om Jee Pandey, Mahendra Shukla, Anjali Dadhich, Samar Mathur, Anup Ingle",
-    event: "IEEE International Conference on Computational Intelligence and Computing Research (ICCICR 2013)",
-    details: "Enathi, India, 2013, pp. 1-7, doi: 10.1109/ICCIC.2013.6724156",
-    link: "https://ieeexplore.ieee.org/document/6724156",
-    type: "international",
-  },
-  {
-    title: "Intelligent Perpetual Echo Attack Detection on User Datagram Protocol Port 7 Using Ant Colony Optimization",
-    authors: "Abhishek Gupta; Om Jee Pandey; Mahendra Shukla; Anjali Dadhich; Anup Ingle; Vishal Ambhore",
-    event: "International Conference on Electronic Systems, Signal Processing and Computing Technologies (ICESC 2014)",
-    details: "Nagpur, India, 2014, pp. 419-424, doi: 10.1109/ICESC.2014.82",
-    link: "https://ieeexplore.ieee.org/document/6745415",
-    type: "international",
-  },
-  {
-    title: "Towards Context-aware Smart Mechatronics Networks: Integrating Swarm Intelligence and Ambient Intelligence",
-    authors: "Abhishek Gupta; Om Jee Pandey; Mahendra Shukla; Anjali Dadhich; Anup Ingle; Pravin Gawande",
-    event: "International Conference on Issues and Challenges in Intelligent Computing Techniques (ICICT 2014)",
-    details: "Ghaziabad, India, 2014, pp. 64-69, doi: 10.1109/ICICICT.2014.6781254",
-    link: "https://ieeexplore.ieee.org/document/6781254",
-    type: "international",
-  },
-  {
-    title: "ICMP Denial of Service (DoS) Attack Detection System",
-    authors: "Sanket Lokhande, Anup Ingle, Nilshree Damani, Aditi Mallavarapu, Mohnish Awade, Piyush Mathurkar",
-    event: "International Conference on Science and Technology (ICST-2K14)",
-    details: "S B Patil College of Engineering, Indapur, Pune, India, 21-22 Feb 2014",
-    link: "",
-    type: "international",
-  },
-  {
-    title: "Update on Next Generation Network Attack: A Review Paper on Network Attacks Classified into Mobile & Computer Base",
-    authors: "Ansari Mohsin Jaweed Ahmed, Shaikh Mohd Rehan, Anup Ingle, Sanket Lokhande, Rohan Saswadkar",
-    event: "International Conference on Electrical, Electronics and Computer Science Engineering (ICEESCE 2015)",
-    details: "Pune, India, 25 Jan 2015, ISBN: 978-2-642-24819-2",
-    link: "",
-    type: "international",
-  },
-  {
-    title: "Smart Parking System",
-    authors: "Anup Ingle, Ashutosh Pathrabe, Tukaram Panchal, Rajat Pandharpurkar",
-    event: "International Conference on Recent Trends in Engineering and Technology (VISHWACON 2016-17)",
-    details: "VIIT Pune, India, 17-18 Feb 2017, ISBN: 978-93-85665-68-4",
-    link: "",
-    type: "international",
-  },
-  {
-    title: "Hardware Entity for Anomaly Detection of Network Traffic",
-    authors: "Anup Ingle, Rishabh Rodkar, Makarand Potdar, Akshay K. Kalbhor",
-    event: "International Conference on Recent Trends in Engineering and Technology (VISHWACON 2016-17)",
-    details: "VIIT Pune, India, 17-18 Feb 2017, ISBN: 978-93-85665-68-4",
-    link: "",
-    type: "international",
-  },
-  {
-    title: "Traffic Flow Optimization Using CNN and GCN for Adaptive Signal Control",
-    authors: "Sanket Kolte; Anup Ingle; Ketki Kshirsagar; P. G. Gawande; Kalpana A. Kumbhar; Rupa S. Kawchale",
-    event: "3rd Asian Conference on Innovation in Technology (ASIANCON 2023)",
-    details: "Ravet, India, 2023, pp. 1-4, doi: 10.1109/ASIANCON58793.2023.10269944",
-    link: "https://ieeexplore.ieee.org/document/10269944",
-    type: "international",
-  },
-  {
-    title: "Enhanced Honey Badger Algorithm for Resource Allocation and Task Scheduling in Cloud Environment",
-    authors: "R. Rajagopal, A. Arunarani, A. Arivarasi, A. Ingle, R. T, R. V. Prakash",
-    event: "4th International Conference on Smart Electronics and Communication (ICOSEC 2023)",
-    details: "Trichy, India, 2023, pp. 1375-1380, doi: 10.1109/ICOSEC58147.2023.10275908",
-    link: "https://ieeexplore.ieee.org/document/10275908",
-    type: "international",
-  },
-  {
-    title: "Analyzing Convolutional Neural Networks as Feature Extractors for Video Regression",
-    authors: "S. Jain, R. Ghotekar, A. Dawande, A. Pawar, A. W. Ingle, V. M. Marathe",
-    event: "7th International Conference on Computing, Communication, Control and Automation (ICCUBEA 2023)",
-    details: "Pune, India, 2023, pp. 1-5, doi: 10.1109/ICCUBEA58933.2023.10392012",
-    link: "https://ieeexplore.ieee.org/document/10392012",
-    type: "international",
-  },
-  {
-    title: "Improving UHVDC Wall Bearings Electric Reliability: Grading Ring Optimization and Field Investigation",
-    authors: "Prashant Kumar; D. Anandhasilambarasan; Brijesh Kumar; P. Karthigaikumar; Anup Ingle",
-    event: "International Conference on Advances in Computation, Communication and Information Technology (ICAICCIT 2023)",
-    details: "India, 2023, doi: 10.1109/ICAICCIT60255.2023.10466033",
-    link: "https://ieeexplore.ieee.org/document/10466033",
-    type: "international",
-  },
-  {
-    title: "Enhancing Silicone Rubber Efficiency: Effects of Aluminum Tri-Hydrate Surface Treatment on Electric and Permeation Characteristics",
-    authors: "A. Raturi, G. Kumar, U. K. Verma, G. Ravivarman, G. Premananthan, A. Ingle",
-    event: "International Conference on Power Energy, Environment and Intelligent Control (PEEIC 2023)",
-    details: "India, 2023, doi: 10.1109/PEEIC59336.2023.10451429",
-    link: "https://ieeexplore.ieee.org/document/10451429",
-    type: "international",
-  },
-  {
-    title: "Federated Machine Learning for Cardiac Disease Detection Using Internet of Medical Things",
-    authors: "K. Aggarwal, V. R. Vimal, U. Patil, S. C, A. Ingle, T. S. Kumar",
-    event: "International Conference on Self Sustainable Artificial Intelligence Systems (ICSSAS 2023)",
-    details: "Erode, India, 2023, pp. 1326-1331, doi: 10.1109/ICSSAS57918.2023.10331771",
-    link: "https://ieeexplore.ieee.org/document/10331771",
-    type: "international",
-  },
-  {
-    title: "Web Scraping-Based Cryptocurrency Prediction and Analysis",
-    authors: "Dhawal Thombare; Atharva Khadake; Rameshwar Kumbhar; Anup Ingle; M.S. Deshmukh; Manish Wadhwani",
-    event: "2025 3rd International Conference on Intelligent Data Communication Technologies and Internet of Things (IDCIoT)",
-    details: "Bengaluru, India, 2025, doi: 10.1109/IDCIOT64235.2025.10915045",
-    link: "https://ieeexplore.ieee.org/document/10915045",
-    type: "international",
-  },
-  {
-    title: "The Cram of Network Safety with its Sharp Attacks and Protective Measures",
-    authors: "Sakshi Deshpande; Aniket Devare; Malhar Dhakulkar; Anup Ingle; Srinivas Chippalkatti; Arati Deshpande",
-    event: "2025 1st International Conference on AIML-Applications for Engineering & Technology (ICAET)",
-    details: "Pune, India, 2025, doi: 10.1109/ICAET63349.2025.10932286",
-    link: "https://ieeexplore.ieee.org/document/10932286",
-    type: "international",
-  },
-  {
-    title: "Neighborhood Selection for Secure and Efficient Data Transmission in Wireless Sensor Network",
-    authors: "Lakshya Swarup; Latha B; Hitesh Kalra; Hannah Jessie Rani R; Anup Ingle; G. Premananthan",
-    event: "2024 IEEE 4th International Conference on ICT in Business Industry & Government (ICTBIG)",
-    details: "Indore, India, 2025, doi: 10.1109/ICTBIG64922.2024.10911192",
-    link: "https://ieeexplore.ieee.org/document/10911192",
-    type: "international",
-  },
-  {
-    title: "Enhancing Cyber Security Against DDoS Attacks: A Comprehensive Review and Future Directions",
-    authors: "Smruti Jagtap; Vikrant Kavitkar; Mahek Jain; Anup Ingle; Jayashree P. Tamkhade; Ketki Kshirsagar",
-    event: "2025 1st International Conference on AIML-Applications for Engineering & Technology (ICAET)",
-    details: "Pune, India, 2025, doi: 10.1109/ICAET63349.2025.10932273",
-    link: "https://ieeexplore.ieee.org/document/10932273",
-    type: "international",
-  },
-  {
-    title: "Real-Time Data Management in Embedded Systems Using a Circular Queue for Efficient Memory Utilization",
-    authors: "Pragati Patil; Atharva Joshi; Aryan Wale; Tanushri Rajput; Minal Deshmukh; Anup Ingle",
-    event: "2025 International Conference on Computational, Communication and Information Technology (ICCCIT)",
-    details: "Indore, India, 2025, doi: 10.1109/ICCCIT62592.2025.10928031",
-    link: "https://ieeexplore.ieee.org/document/10928031",
-    type: "international",
-  },
-  {
-    title: "Real-Time Supply Chain Management using Automation and Big Data in the Cloud",
-    authors: "Shweta Saxena; Mansi Kukreja; Anup Ingle; A. Thangamani; Rajeev Sharma; S Murugeswari",
-    event: "2024 15th International Conference on Computing Communication and Networking Technologies (ICCCNT)",
-    details: "Bhopal, India, 2025, doi: 10.1109/ICCCNT61001.2024.10724731",
-    link: "https://ieeexplore.ieee.org/document/10928031",
-    type: "international",
-  },
-  {
-    title: "Delving Into Virtual Ventures and The Growing Vi-Gnettes of Vehicular Innovations",
-    authors: "X. Mercilin Raajini; Lalit Khanna; Malathi H; Anup Ingle; G. R. Vijayshankar; Danish Kundra",
-    event: "2024 IEEE 2nd International Conference on Innovations in High Speed Communication and Signal Processing (IHCSP)",
-    details: "Kamand, India, 2025, doi: 10.1109/IHCSP63227.2024.10960022",
-    link: "https://ieeexplore.ieee.org/document/10960022",
-    type: "international",
-  },
-  {
-    title: "Enhancing Watershed Segmentation for Precise Mammogram Detection and Classification with the Application of Feedforward Neural Network Strategies",
-    authors: "S. Kannimuthu; Amritpal Sidhu; P. Chandrakala; Yuvraj Parmar; Shrishail B Sollapur; Anup Ingle",
-    event: "2024 IEEE 4th International Conference on ICT in Business Industry & Government (ICTBIG)",
-    details: "Indore, India, 2025, doi: 10.1109/ICTBIG64922.2024.10911243",
-    link: "https://ieeexplore.ieee.org/document/10911243",
-    type: "international",
-  },
-];
+    {
+      title: "Computational Intelligence based Intrusion Detection Systems for Wireless Communication and Pervasive Computing Networks",
+      authors: "Abhishek Gupta, Om Jee Pandey, Mahendra Shukla, Anjali Dadhich, Samar Mathur, Anup Ingle",
+      event: "IEEE International Conference on Computational Intelligence and Computing Research (ICCICR 2013)",
+      details: "Enathi, India, 2013, pp. 1-7, doi: 10.1109/ICCIC.2013.6724156",
+      link: "https://ieeexplore.ieee.org/document/6724156",
+      type: "international",
+    },
+    {
+      title: "Intelligent Perpetual Echo Attack Detection on User Datagram Protocol Port 7 Using Ant Colony Optimization",
+      authors: "Abhishek Gupta; Om Jee Pandey; Mahendra Shukla; Anjali Dadhich; Anup Ingle; Vishal Ambhore",
+      event: "International Conference on Electronic Systems, Signal Processing and Computing Technologies (ICESC 2014)",
+      details: "Nagpur, India, 2014, pp. 419-424, doi: 10.1109/ICESC.2014.82",
+      link: "https://ieeexplore.ieee.org/document/6745415",
+      type: "international",
+    },
+    {
+      title: "Towards Context-aware Smart Mechatronics Networks: Integrating Swarm Intelligence and Ambient Intelligence",
+      authors: "Abhishek Gupta; Om Jee Pandey; Mahendra Shukla; Anjali Dadhich; Anup Ingle; Pravin Gawande",
+      event: "International Conference on Issues and Challenges in Intelligent Computing Techniques (ICICT 2014)",
+      details: "Ghaziabad, India, 2014, pp. 64-69, doi: 10.1109/ICICICT.2014.6781254",
+      link: "https://ieeexplore.ieee.org/document/6781254",
+      type: "international",
+    },
+    {
+      title: "ICMP Denial of Service (DoS) Attack Detection System",
+      authors: "Sanket Lokhande, Anup Ingle, Nilshree Damani, Aditi Mallavarapu, Mohnish Awade, Piyush Mathurkar",
+      event: "International Conference on Science and Technology (ICST-2K14)",
+      details: "S B Patil College of Engineering, Indapur, Pune, India, 21-22 Feb 2014",
+      link: "",
+      type: "international",
+    },
+    {
+      title: "Update on Next Generation Network Attack: A Review Paper on Network Attacks Classified into Mobile & Computer Base",
+      authors: "Ansari Mohsin Jaweed Ahmed, Shaikh Mohd Rehan, Anup Ingle, Sanket Lokhande, Rohan Saswadkar",
+      event: "International Conference on Electrical, Electronics and Computer Science Engineering (ICEESCE 2015)",
+      details: "Pune, India, 25 Jan 2015, ISBN: 978-2-642-24819-2",
+      link: "",
+      type: "international",
+    },
+    {
+      title: "Smart Parking System",
+      authors: "Anup Ingle, Ashutosh Pathrabe, Tukaram Panchal, Rajat Pandharpurkar",
+      event: "International Conference on Recent Trends in Engineering and Technology (VISHWACON 2016-17)",
+      details: "VIIT Pune, India, 17-18 Feb 2017, ISBN: 978-93-85665-68-4",
+      link: "",
+      type: "international",
+    },
+    {
+      title: "Hardware Entity for Anomaly Detection of Network Traffic",
+      authors: "Anup Ingle, Rishabh Rodkar, Makarand Potdar, Akshay K. Kalbhor",
+      event: "International Conference on Recent Trends in Engineering and Technology (VISHWACON 2016-17)",
+      details: "VIIT Pune, India, 17-18 Feb 2017, ISBN: 978-93-85665-68-4",
+      link: "",
+      type: "international",
+    },
+    {
+      title: "Traffic Flow Optimization Using CNN and GCN for Adaptive Signal Control",
+      authors: "Sanket Kolte; Anup Ingle; Ketki Kshirsagar; P. G. Gawande; Kalpana A. Kumbhar; Rupa S. Kawchale",
+      event: "3rd Asian Conference on Innovation in Technology (ASIANCON 2023)",
+      details: "Ravet, India, 2023, pp. 1-4, doi: 10.1109/ASIANCON58793.2023.10269944",
+      link: "https://ieeexplore.ieee.org/document/10269944",
+      type: "international",
+    },
+    {
+      title: "Enhanced Honey Badger Algorithm for Resource Allocation and Task Scheduling in Cloud Environment",
+      authors: "R. Rajagopal, A. Arunarani, A. Arivarasi, A. Ingle, R. T, R. V. Prakash",
+      event: "4th International Conference on Smart Electronics and Communication (ICOSEC 2023)",
+      details: "Trichy, India, 2023, pp. 1375-1380, doi: 10.1109/ICOSEC58147.2023.10275908",
+      link: "https://ieeexplore.ieee.org/document/10275908",
+      type: "international",
+    },
+    {
+      title: "Analyzing Convolutional Neural Networks as Feature Extractors for Video Regression",
+      authors: "S. Jain, R. Ghotekar, A. Dawande, A. Pawar, A. W. Ingle, V. M. Marathe",
+      event: "7th International Conference on Computing, Communication, Control and Automation (ICCUBEA 2023)",
+      details: "Pune, India, 2023, pp. 1-5, doi: 10.1109/ICCUBEA58933.2023.10392012",
+      link: "https://ieeexplore.ieee.org/document/10392012",
+      type: "international",
+    },
+    {
+      title: "Improving UHVDC Wall Bearings Electric Reliability: Grading Ring Optimization and Field Investigation",
+      authors: "Prashant Kumar; D. Anandhasilambarasan; Brijesh Kumar; P. Karthigaikumar; Anup Ingle",
+      event: "International Conference on Advances in Computation, Communication and Information Technology (ICAICCIT 2023)",
+      details: "India, 2023, doi: 10.1109/ICAICCIT60255.2023.10466033",
+      link: "https://ieeexplore.ieee.org/document/10466033",
+      type: "international",
+    },
+    {
+      title: "Enhancing Silicone Rubber Efficiency: Effects of Aluminum Tri-Hydrate Surface Treatment on Electric and Permeation Characteristics",
+      authors: "A. Raturi, G. Kumar, U. K. Verma, G. Ravivarman, G. Premananthan, A. Ingle",
+      event: "International Conference on Power Energy, Environment and Intelligent Control (PEEIC 2023)",
+      details: "India, 2023, doi: 10.1109/PEEIC59336.2023.10451429",
+      link: "https://ieeexplore.ieee.org/document/10451429",
+      type: "international",
+    },
+    {
+      title: "Federated Machine Learning for Cardiac Disease Detection Using Internet of Medical Things",
+      authors: "K. Aggarwal, V. R. Vimal, U. Patil, S. C, A. Ingle, T. S. Kumar",
+      event: "International Conference on Self Sustainable Artificial Intelligence Systems (ICSSAS 2023)",
+      details: "Erode, India, 2023, pp. 1326-1331, doi: 10.1109/ICSSAS57918.2023.10331771",
+      link: "https://ieeexplore.ieee.org/document/10331771",
+      type: "international",
+    },
+    {
+      title: "Web Scraping-Based Cryptocurrency Prediction and Analysis",
+      authors: "Dhawal Thombare; Atharva Khadake; Rameshwar Kumbhar; Anup Ingle; M.S. Deshmukh; Manish Wadhwani",
+      event: "2025 3rd International Conference on Intelligent Data Communication Technologies and Internet of Things (IDCIoT)",
+      details: "Bengaluru, India, 2025, doi: 10.1109/IDCIOT64235.2025.10915045",
+      link: "https://ieeexplore.ieee.org/document/10915045",
+      type: "international",
+    },
+    {
+      title: "The Cram of Network Safety with its Sharp Attacks and Protective Measures",
+      authors: "Sakshi Deshpande; Aniket Devare; Malhar Dhakulkar; Anup Ingle; Srinivas Chippalkatti; Arati Deshpande",
+      event: "2025 1st International Conference on AIML-Applications for Engineering & Technology (ICAET)",
+      details: "Pune, India, 2025, doi: 10.1109/ICAET63349.2025.10932286",
+      link: "https://ieeexplore.ieee.org/document/10932286",
+      type: "international",
+    },
+    {
+      title: "Neighborhood Selection for Secure and Efficient Data Transmission in Wireless Sensor Network",
+      authors: "Lakshya Swarup; Latha B; Hitesh Kalra; Hannah Jessie Rani R; Anup Ingle; G. Premananthan",
+      event: "2024 IEEE 4th International Conference on ICT in Business Industry & Government (ICTBIG)",
+      details: "Indore, India, 2025, doi: 10.1109/ICTBIG64922.2024.10911192",
+      link: "https://ieeexplore.ieee.org/document/10911192",
+      type: "international",
+    },
+    {
+      title: "Enhancing Cyber Security Against DDoS Attacks: A Comprehensive Review and Future Directions",
+      authors: "Smruti Jagtap; Vikrant Kavitkar; Mahek Jain; Anup Ingle; Jayashree P. Tamkhade; Ketki Kshirsagar",
+      event: "2025 1st International Conference on AIML-Applications for Engineering & Technology (ICAET)",
+      details: "Pune, India, 2025, doi: 10.1109/ICAET63349.2025.10932273",
+      link: "https://ieeexplore.ieee.org/document/10932273",
+      type: "international",
+    },
+    {
+      title: "Real-Time Data Management in Embedded Systems Using a Circular Queue for Efficient Memory Utilization",
+      authors: "Pragati Patil; Atharva Joshi; Aryan Wale; Tanushri Rajput; Minal Deshmukh; Anup Ingle",
+      event: "2025 International Conference on Computational, Communication and Information Technology (ICCCIT)",
+      details: "Indore, India, 2025, doi: 10.1109/ICCCIT62592.2025.10928031",
+      link: "https://ieeexplore.ieee.org/document/10928031",
+      type: "international",
+    },
+    {
+      title: "Real-Time Supply Chain Management using Automation and Big Data in the Cloud",
+      authors: "Shweta Saxena; Mansi Kukreja; Anup Ingle; A. Thangamani; Rajeev Sharma; S Murugeswari",
+      event: "2024 15th International Conference on Computing Communication and Networking Technologies (ICCCNT)",
+      details: "Bhopal, India, 2025, doi: 10.1109/ICCCNT61001.2024.10724731",
+      link: "https://ieeexplore.ieee.org/document/10928031",
+      type: "international",
+    },
+    {
+      title: "Delving Into Virtual Ventures and The Growing Vi-Gnettes of Vehicular Innovations",
+      authors: "X. Mercilin Raajini; Lalit Khanna; Malathi H; Anup Ingle; G. R. Vijayshankar; Danish Kundra",
+      event: "2024 IEEE 2nd International Conference on Innovations in High Speed Communication and Signal Processing (IHCSP)",
+      details: "Kamand, India, 2025, doi: 10.1109/IHCSP63227.2024.10960022",
+      link: "https://ieeexplore.ieee.org/document/10960022",
+      type: "international",
+    },
+    {
+      title: "Enhancing Watershed Segmentation for Precise Mammogram Detection and Classification with the Application of Feedforward Neural Network Strategies",
+      authors: "S. Kannimuthu; Amritpal Sidhu; P. Chandrakala; Yuvraj Parmar; Shrishail B Sollapur; Anup Ingle",
+      event: "2024 IEEE 4th International Conference on ICT in Business Industry & Government (ICTBIG)",
+      details: "Indore, India, 2025, doi: 10.1109/ICTBIG64922.2024.10911243",
+      link: "https://ieeexplore.ieee.org/document/10911243",
+      type: "international",
+    },
+  ];
 
 
 
@@ -2141,108 +2139,107 @@ function Books() {
 
       {/* Contributed Book Chapters */}
       {/* Book Chapters */}
-<SectionWrapper title="Book Chapters">
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    {[
-      {
-        year: "2025",
-        chapterTitle: "Impacts of Digital Technologies Across Generations",
-        bookTitle:
-          "Bridging Academia and Industry Through Cloud Integration in Education",
-        doi: "10.4018/979-8-3693-6705-6.ch001",
-        doiLink: "https://doi.org/10.4018/979-8-3693-6705-6.ch001",
-        isbn: "9798369367070, 9798369367056",
-        coAuthors: "K.P. Kshirsagar; A. Ingle",
-        scopusLink: "https://www.scopus.com/record/display.uri?eid=2-s2.0-85218055676",
-        crossrefLink: "",
-      },
-      {
-        year: "2025",
-        chapterTitle:
-          "Human-centric IT Management: Enhancing Employee Productivity and Satisfaction",
-        bookTitle:
-          "Tech-Driven Strategies: Leveraging Information Technology in Business Management",
-        doi: "— (no Crossref DOI listed yet)",
-        doiLink: "",
-        isbn: "9798895303986, 9798895302606",
-        coAuthors: "O. Bagaria; S. Mohammed; R. Kamalraj; A. Ingle",
-        scopusLink: "https://www.scopus.com/pages/publications/86000193063",
-        crossrefLink: "",
-      },
-      {
-        year: "2025",
-        chapterTitle:
-          "Empowering Individuals with Disabilities: The Role of Mobile Health Apps in Enhancing Accessibility and Health Outcomes",
-        bookTitle:
-          "Modern Digital Approaches to Care Technologies for Individuals with Disabilities",
-        doi: "10.4018/979-8-3693-7560-0.ch004",
-        doiLink: "https://doi.org/10.4018/979-8-3693-7560-0.ch004",
-        isbn: "9798369375600, 9798369375624",
-        coAuthors: "A.W. Ingle; K.P. Kshirsagar; P.G. Gawande",
-        scopusLink: "https://www.scopus.com/pages/publications/105005127645",
-        crossrefLink: "https://doi.org/10.4018/979-8-3693-7560-0.ch004",
-      },
-    ].map((book, index) => (
-      <div
-        key={index}
-        className={`flex flex-col rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition bg-white border ${
-          index % 2 === 0 ? "border-amber-200" : "border-yellow-200"
-        }`}
-      >
-       
-        <div className="p-4 text-sm space-y-2">
-          <p className="font-semibold text-amber-700">{book.chapterTitle}</p>
-          <p className="italic text-gray-700">{book.bookTitle}</p>
-          <p><span className="font-medium">Year:</span> {book.year}</p>
-          <p>
-            <span className="font-medium">DOI:</span>{" "}
-            {book.doiLink ? (
-              <a
-                href={book.doiLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                {book.doi}
-              </a>
-            ) : (
-              book.doi
-            )}
-          </p>
-          <p><span className="font-medium">ISBN(s):</span> {book.isbn}</p>
-          <p><span className="font-medium">Co-Authors:</span> {book.coAuthors}</p>
-          <p className="flex flex-wrap gap-3">
-           <div className="space-x-2">
-  {book.scopusLink && (
-    <a
-      href={book.scopusLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 hover:underline"
-    >
-      Scopus Record
-    </a>
-  )}
-  {book.scopusLink && book.crossrefLink && <span>/</span>}
-  {book.crossrefLink && (
-    <a
-      href={book.crossrefLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-green-600 hover:underline"
-    >
-      Crossref
-    </a>
-  )}
-</div>
+      <SectionWrapper title="Book Chapters">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {[
+            {
+              year: "2025",
+              chapterTitle: "Impacts of Digital Technologies Across Generations",
+              bookTitle:
+                "Bridging Academia and Industry Through Cloud Integration in Education",
+              doi: "10.4018/979-8-3693-6705-6.ch001",
+              doiLink: "https://doi.org/10.4018/979-8-3693-6705-6.ch001",
+              isbn: "9798369367070, 9798369367056",
+              coAuthors: "K.P. Kshirsagar; A. Ingle",
+              scopusLink: "https://www.scopus.com/record/display.uri?eid=2-s2.0-85218055676",
+              crossrefLink: "",
+            },
+            {
+              year: "2025",
+              chapterTitle:
+                "Human-centric IT Management: Enhancing Employee Productivity and Satisfaction",
+              bookTitle:
+                "Tech-Driven Strategies: Leveraging Information Technology in Business Management",
+              doi: "— (no Crossref DOI listed yet)",
+              doiLink: "",
+              isbn: "9798895303986, 9798895302606",
+              coAuthors: "O. Bagaria; S. Mohammed; R. Kamalraj; A. Ingle",
+              scopusLink: "https://www.scopus.com/pages/publications/86000193063",
+              crossrefLink: "",
+            },
+            {
+              year: "2025",
+              chapterTitle:
+                "Empowering Individuals with Disabilities: The Role of Mobile Health Apps in Enhancing Accessibility and Health Outcomes",
+              bookTitle:
+                "Modern Digital Approaches to Care Technologies for Individuals with Disabilities",
+              doi: "10.4018/979-8-3693-7560-0.ch004",
+              doiLink: "https://doi.org/10.4018/979-8-3693-7560-0.ch004",
+              isbn: "9798369375600, 9798369375624",
+              coAuthors: "A.W. Ingle; K.P. Kshirsagar; P.G. Gawande",
+              scopusLink: "https://www.scopus.com/pages/publications/105005127645",
+              crossrefLink: "https://doi.org/10.4018/979-8-3693-7560-0.ch004",
+            },
+          ].map((book, index) => (
+            <div
+              key={index}
+              className={`flex flex-col rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition bg-white border ${index % 2 === 0 ? "border-amber-200" : "border-yellow-200"
+                }`}
+            >
 
-            
-          </p>
+              <div className="p-4 text-sm space-y-2">
+                <p className="font-semibold text-amber-700">{book.chapterTitle}</p>
+                <p className="italic text-gray-700">{book.bookTitle}</p>
+                <p><span className="font-medium">Year:</span> {book.year}</p>
+                <p>
+                  <span className="font-medium">DOI:</span>{" "}
+                  {book.doiLink ? (
+                    <a
+                      href={book.doiLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:underline"
+                    >
+                      {book.doi}
+                    </a>
+                  ) : (
+                    book.doi
+                  )}
+                </p>
+                <p><span className="font-medium">ISBN(s):</span> {book.isbn}</p>
+                <p><span className="font-medium">Co-Authors:</span> {book.coAuthors}</p>
+                <p className="flex flex-wrap gap-3">
+                  <div className="space-x-2">
+                    {book.scopusLink && (
+                      <a
+                        href={book.scopusLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:underline"
+                      >
+                        Scopus Record
+                      </a>
+                    )}
+                    {book.scopusLink && book.crossrefLink && <span>/</span>}
+                    {book.crossrefLink && (
+                      <a
+                        href={book.crossrefLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-green-600 hover:underline"
+                      >
+                        Crossref
+                      </a>
+                    )}
+                  </div>
+
+
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-    ))}
-  </div>
-</SectionWrapper>
+      </SectionWrapper>
 
     </div>
   );

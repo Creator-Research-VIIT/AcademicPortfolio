@@ -4,12 +4,14 @@ const VisitorCounter = () => {
   const [count, setCount] = useState(null);
 
   useEffect(() => {
-    // Replace "yourdomain.com" with a unique namespace for your site
-    fetch("https://api.countapi.xyz/hit/anupingle.com/visits")
-      .then((res) => res.json())
-      .then((data) => setCount(data.value))
-      .catch((err) => console.error("Error fetching visitor count:", err));
-  }, []);
+  fetch("https://api.countapi.xyz/hit/www.anupingle.com/visits")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("Visitor API response:", data);
+      setCount(data.value);
+    })
+    .catch((err) => console.error("Error fetching visitors:", err));
+}, []);
 
   return (
     <div className="text-center text-sm text-gray-600">
