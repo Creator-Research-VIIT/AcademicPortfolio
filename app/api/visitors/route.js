@@ -1,23 +1,27 @@
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
 
-// Create GA client
 const analyticsDataClient = new BetaAnalyticsDataClient({
-  credentials: JSON.parse(process.env.GA_CREDENTIALS), // store your GA service account JSON as an env var
+  credentials: JSON.parse(process.env.GA_CREDENTIALS),
 });
 
-export default async function handler(req, res) {
+export async function GET() {
   try {
     const [response] = await analyticsDataClient.runReport({
-      property: properties/505652030, // replace with your GA4 property ID
+      property:` properties/${process.env.GA4_PROPERTY_ID}`,
       dateRanges: [{ startDate: "7daysAgo", endDate: "today" }],
       metrics: [{ name: "activeUsers" }],
     });
 
-    const visitors = response.rows[0].metricValues[0].value;
+    const visitors = response.rows?.[0]?.metricValues?.[0]?.value || 0;
 
-    res.status(200).json({ visitors });
+    return new Response(JSON.stringify({ visitors }), {
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (error) {
     console.error("GA API error:", error);
-    res.status(500).json({ error: "Failed to fetch visitors" });
+    return new Response(JSON.stringify({ error: "Failed to fetch visitors" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }
