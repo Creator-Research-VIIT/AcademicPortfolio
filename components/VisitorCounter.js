@@ -4,7 +4,7 @@ const VisitorCounter = () => {
   const [count, setCount] = useState(null);
 
   useEffect(() => {
-    fetch("https://hits.sh/www.anupingle.com.json?style=flat")
+    fetch("https://hits.sh/www.anupingle.com.json")
       .then((res) => res.json())
       .then((data) => setCount(data.count))
       .catch((err) => console.error("Error fetching visitors:", err));
@@ -21,4 +21,4 @@ const VisitorCounter = () => {
   );
 };
 
-export default VisitorCounter;
+export default VisitorCounter;
