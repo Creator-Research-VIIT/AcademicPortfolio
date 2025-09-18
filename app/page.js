@@ -8,6 +8,7 @@ import { Globe, Flag } from "lucide-react";
 import { FaDatabase, FaGlobe } from "react-icons/fa";
 import { SiGooglescholar, SiOrcid } from "react-icons/si";
 import VisitorCounter from "@/components/GoogleAnalytics";
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 
 
