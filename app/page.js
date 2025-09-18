@@ -7,6 +7,8 @@ import { FiChevronDown, FiCalendar, FiChevronUp } from "react-icons/fi";
 import { Globe, Flag } from "lucide-react";
 import { FaDatabase, FaGlobe } from "react-icons/fa";
 import { SiGooglescholar, SiOrcid } from "react-icons/si";
+import VisitorCounter from "@/components/VisitorCounter";
+
 
 
 
@@ -275,8 +277,16 @@ export default function Home() {
             <div className="mt-6 text-center">
               <h3 className="text-xl md:text-2xl font-semibold text-amber-900">Dr. Anup Ingle</h3>
               <p className="text-sm md:text-base text-gray-700">Assistant Professor, Department of E&TC, VIT, Pune, India</p>
+              <div className="p-4">
+      <h1 className="text-xl font-bold mb-4">My Website</h1>
+      
+      {/* Use VisitorCounter here */}
+      <VisitorCounter />
+    </div>
             </div>
           </div>
+
+           
 
           {/* Text */}
           <div className="text-center md:text-left">
