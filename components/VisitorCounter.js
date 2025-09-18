@@ -4,7 +4,7 @@ const VisitorCounter = () => {
   const [count, setCount] = useState(null);
 
   useEffect(() => {
-    fetch("api/visitor")
+    fetch("api/visitors")
       .then((res) => res.json())
       .then((data) => setCount(data.visitors))
       .catch((err) => console.error("Error fetching visitors:", err));
