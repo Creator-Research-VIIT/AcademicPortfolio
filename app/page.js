@@ -7,8 +7,8 @@ import { FiChevronDown, FiCalendar, FiChevronUp } from "react-icons/fi";
 import { Globe, Flag } from "lucide-react";
 import { FaDatabase, FaGlobe } from "react-icons/fa";
 import { SiGooglescholar, SiOrcid } from "react-icons/si";
-import VisitorCounter from "@/components/GoogleAnalytics";
-import GoogleAnalytics from '@/components/GoogleAnalytics';
+import VisitorCounter from '@/components/VisitorCounter';
+
 
 
 
@@ -281,7 +281,7 @@ export default function Home() {
               <div className="p-4">
 
                 {/* Use VisitorCounter here */}
-                <GoogleAnalytics />
+                <VisitorCounter />
               </div>
             </div>
           </div>
