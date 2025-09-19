@@ -16,8 +16,8 @@ export default function GoatCounterClient() {
   }, [pathname, searchParams]);
 
   return (
-    <script data-goatcounter="https://yashrathod.goatcounter.com/count"
+    <Script data-goatcounter="https://yashrathod.goatcounter.com/count"
      data-goatcounter-settings='{"allow_local": true}'
-        async src="//gc.zgo.at/count.js"></script>
+        async src="//gc.zgo.at/count.js"></Script>
   );
 }
