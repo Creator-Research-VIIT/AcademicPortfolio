@@ -1,27 +1,37 @@
-import { BetaAnalyticsDataClient } from "@google-analytics/data";
-
-const analyticsDataClient = new BetaAnalyticsDataClient({
-  credentials: JSON.parse(process.env.GA_CREDENTIALS),
-});
-
+// app/api/visitors/route.js
 export async function GET() {
   try {
-    const [response] = await analyticsDataClient.runReport({
-      property:` properties/${process.env.GA4_PROPERTY_ID}`,
-      dateRanges: [{ startDate: "7daysAgo", endDate: "today" }],
-      metrics: [{ name: "activeUsers" }],
+    const res = await fetch("https://yashrathod.goatcounter.com/api/v0/stats/total", {
+      headers: {
+        Authorization: `Bearer ${process.env.GOATCOUNTER_API_TOKEN}`,
+      },
     });
 
-    const visitors = response.rows?.[0]?.metricValues?.[0]?.value || 0;
+    if (!res.ok) {
+      const text = await res.text();
+      console.error("❌ GoatCounter API error:", text);
+      return new Response(JSON.stringify({ error: "Failed to fetch stats", details: text }), {
+        status: res.status,
+      });
+    }
 
-    return new Response(JSON.stringify({ visitors }), {
-      headers: { "Content-Type": "application/json" },
-    });
-  } catch (error) {
-    console.error("GA API error:", error);
-    return new Response(JSON.stringify({ error: "Failed to fetch visitors" }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
-    });
+    const data = await res.json();
+    console.log("✅ GoatCounter API data:", data);
+
+    const totalVisits = data.total || 0;
+    const todayStats = data.stats?.[data.stats.length - 1] || {};
+    const todayVisits = todayStats.daily || 0;
+
+    return new Response(
+      JSON.stringify({
+        totalVisits,
+        todayVisits,
+        daily: data.stats || [],
+      }),
+      { status: 200 }
+    );
+  } catch (err) {
+    console.error("💥 API route crashed:", err);
+    return new Response(JSON.stringify({ error: err.message }), { status: 500 });
   }
 }
