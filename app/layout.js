@@ -2,7 +2,6 @@
 import { Inter } from 'next/font/google';
 import '../public/styles/globals.css';
 import LayoutWrapper from '../components/LayoutWrapper';
-import GoogleAnalytics from '@/components/GoogleAnalytics';
 import GoatCounterClient from '@/components/goatcounter';
 import { Suspense } from 'react';
 
