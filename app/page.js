@@ -453,89 +453,90 @@ const tabs = [
 ];
 const testimonials = {
   industry: [
-    {
-      name: "John Smith",
-      designation: "CTO, TechCorp",
-      message: "Working with Dr. Anup Ingle was a transformative experience. His insights into AI applications are remarkable."
+     {
+      name: "Avinash Sawant",
+      designation: "Engineering Director, Seagate Technology",
+      message: "I have had the pleasure of working with Anup Ingle, Assistant Professor, and his team in building strong industry-academia collaboration. Through his efforts, we have been able to onboard highly skilled interns at Seagate Technology, which has greatly supported our projects.\n\nAnup consistently provides valuable guidance on bridging the gap between college and industry, ensuring students are well-prepared for real-world challenges. His passion for innovation is evident in the way he and his team work on cutting-edge technologies such as Artificial Intelligence, Machine Learning, and Cybersecurity.\n\nOur experience working with Anup has been excellent, and I truly appreciate his dedication, forward-looking mindset, and commitment to nurturing the next generation of talent."
     },
     {
-      name: "Sarah Johnson",
-      designation: "Senior Engineer, InnovateX",
-      message: "Anup's contribution to our research and product development was invaluable. Highly recommended."
+      name: "Dr Mayur Desai",
+      designation: "Director, Creator Research Pvt Ltd",
+      message: "Dr Anup sir is very friendly, dedicated to his work. Supported and motivated person."
     },
     {
-      name: "Michael Brown",
-      designation: "Project Manager, DataWave",
-      message: "Exceptional professionalism and technical expertise. The project outcomes exceeded expectations."
+      name: "Milind Kulkarni",
+      designation: "HRBP India Lead, H B Fuller India",
+      message: "Dr. Anup demonstrates a strong understanding of organizational requirements and provides collaborative support. His expertise and knowledge are highly valued, and he proactively fosters strong working relationships."
     },
     {
-      name: "Michael Brown",
-      designation: "Project Manager, DataWave",
-      message: "Exceptional professionalism and technical expertise. The project outcomes exceeded expectations."
+      name: "Sujeet Brahmankar",
+      designation: "Software Developer, Edtech",
+      message: "I had the privilege of working with Dr. Anup Ingle between 2018–2020, during which he mentored us on an edtech project. His strategic guidance, insightful analysis of students’ needs, and ability to provide practical solutions were invaluable in shaping the project’s direction and success. I highly recommend Dr. Ingle for his expertise and impactful mentorship."
     },
     {
-      name: "Michael Brown",
-      designation: "Project Manager, DataWave",
-      message: "Exceptional professionalism and technical expertise. The project outcomes exceeded expectations."
+      name: "Anurag Shrikhande",
+      designation: "Managing Director, SDPL And Intenics Pvt Ltd",
+      message: "It was a pleasure to work with Dr. Anup Ingle for our product designing project Smart Water Info. Initially, it was complicated up to the first phase of the technical stage, but his support and knowledge were highly applicable. I wish him a bright future."
+    },
+    {
+      name: "Amresh Khar",
+      designation: "Self Employed, Automobiles",
+      message: "Mr. Anup is one of the dedicated members in the industry of academia who takes major decisions to accomplish dreams of his students. A person who takes initiative to bridge industry with academic students. In one word — 'Humble'."
+    },
+    {
+      name: "Dr Purabi Garai",
+      designation: "Scientist, DRDO",
+      message: "Dr Anup is a specialist in the field of Electronics & Communication and is a learned academician. He has been working on various significant projects and nurtures his students to stand in world-level competition. Best wishes."
     }
+   
   ],
 
   students: [
     {
-      name: "Riya Patel",
-      designation: "Alumni, Computer Science",
-      message: "Dr. Anup's guidance helped me secure my dream job. His mentorship goes beyond academics."
+      name: "Yash Rathod",
+      designation: "Student, E&TC 2026, Vishwakarma Institute of Information Technology",
+      message: "Learning under Anup Sir has been inspiring — his practical insights and constant encouragement push me to think bigger and do better."
     },
     {
-      name: "Arjun Mehta",
-      designation: "Student, AI Lab",
-      message: "Learned so much from his practical approach to projects. Truly inspiring!"
+      name: "Dr. Rameez Shamalik",
+      designation: "Associate Professor, MIT ADTU, E&TC 2008",
+      message: "Anup sir being so young and friendly was the breath of fresh air and a 'Go to' person for all of us. His smile and problem-solving attitude made our final year easy and worth remembering."
     },
     {
-      name: "Sneha Rao",
-      designation: "Alumni, Data Analytics",
-      message: "The workshops and sessions were highly interactive and insightful. I feel confident in my skills now."
+      name: "Rujuta Mhaskar",
+      designation: "Freelance Consultant, BE E&TC 2015",
+      message: "We had the privilege of learning under professors like Anup Sir, whose unwavering commitment to teaching consistently stood above all else. His dedication to his students and their academic growth was truly exceptional."
     },
     {
-      name: "Sneha Rao",
-      designation: "Alumni, Data Analytics",
-      message: "The workshops and sessions were highly interactive and insightful. I feel confident in my skills now."
+      name: "Purva Sanjay Gaikwad",
+      designation: "SDE, Amazon Web Services, BTech Computer Engineering 2022",
+      message: "I’m truly grateful to Dr. Anup Ingale from the Computer Science department for his constant guidance and mentorship. His support was instrumental in helping me secure my internship, and his advice has had a lasting impact on my academic and professional growth."
     },
     {
-      name: "Sneha Rao",
-      designation: "Alumni, Data Analytics",
-      message: "The workshops and sessions were highly interactive and insightful. I feel confident in my skills now."
+      name: "Abhishek Mallav",
+      designation: "Student, ENTC 2027, Vishwakarma Institute of Information Technology",
+      message: "Your teaching in networking was truly exceptional. The way you explained the OSI model, the functions of different network layers, and networking concepts in general was both insightful and engaging. Your guidance not only helped me build a strong understanding of how networks operate but also gave me a clearer perspective on how communication happens between devices over the internet. It was an invaluable learning experience."
+    },
+    {
+      name: "Piyush Bali",
+      designation: "Senior Software Engineer, eQTechnologic Pvt Ltd, CSE 2022",
+      message: "Dr. Anup Ingale was the first to spark my interest in programming. His guidance, encouragement for research, and the platform he created for competitive programming shaped both my skills and confidence. Under his guidance, I was able to create an environment for competitive programming in college."
+    },
+    {
+      name: "Vaishnav Gonare",
+      designation: "Cloud Engineer, Glide Clouds, B.Tech E&TC 2025",
+      message: "Learning under Dr. Anup Ingle Sir was a truly enriching experience. His teaching style, mentorship, and constant encouragement inspired me to grow both technically and personally."
+    },
+    {
+      name: "Vedant Bhosale",
+      designation: "IT Admin, Trade and Retail, BTech IT 2022",
+      message: "Dr. Anup Ingle’s teaching and hands-on lab sessions really strengthened my programming skills. His mentorship made tough concepts easy to understand and gave me the confidence to tackle real-world challenges in the industry."
     }
   ],
 
-  collaborators: [
-    {
-      name: "Emily Davis",
-      designation: "Research Partner, AI Solutions",
-      message: "Collaborating with Dr. Anup was smooth and productive. He brings clarity and innovative thinking to every discussion."
-    },
-    {
-      name: "David Wilson",
-      designation: "Co-Author, International Journal",
-      message: "His research inputs were critical in publishing our work successfully. A true collaborator."
-    },
-    {
-      name: "Laura Martin",
-      designation: "Industry Mentor, TechWorkshop",
-      message: "Dr. Anup consistently delivers high-quality insights and practical solutions. Pleasure to work with."
-    },
-    {
-      name: "Laura Martin",
-      designation: "Industry Mentor, TechWorkshop",
-      message: "Dr. Anup consistently delivers high-quality insights and practical solutions. Pleasure to work with."
-    },
-    {
-      name: "Laura Martin",
-      designation: "Industry Mentor, TechWorkshop",
-      message: "Dr. Anup consistently delivers high-quality insights and practical solutions. Pleasure to work with."
-    }
-  ]
+  collaborators: []
 };
+
 
 
 function AcademicPortfolio() {
@@ -759,8 +760,9 @@ function AcademicPortfolio() {
                   className="inline-block min-w-[280px] max-w-sm bg-white border border-amber-200 rounded-xl p-4 shadow-sm"
                 >
                   <p className="text-yellow-800 text-sm">{testimonial.message}</p>
+                  <p className='font-semibold text-yellow-900'>{testimonial.name}</p>
                   <div className="flex items-center gap-2 mt-2">
-                    <span className="font-semibold text-yellow-900">{testimonial.name}</span>
+                    
                     <span className="text-yellow-700 text-xs">{testimonial.designation}</span>
                   </div>
                 </div>
@@ -779,8 +781,9 @@ function AcademicPortfolio() {
                   className="inline-block min-w-[280px] max-w-sm bg-white border border-amber-200 rounded-xl p-4 shadow-sm"
                 >
                   <p className="text-yellow-800 text-sm">{testimonial.message}</p>
+                  <p className='font-semibold text-yellow-900'>{testimonial.name}</p>
                   <div className="flex items-center gap-2 mt-2">
-                    <span className="font-semibold text-yellow-900">{testimonial.name}</span>
+                   
                     <span className="text-yellow-700 text-xs">{testimonial.designation}</span>
                   </div>
                 </div>
