@@ -510,7 +510,7 @@ const testimonials = {
     {
       name: "Purva Sanjay Gaikwad",
       designation: "SDE, Amazon Web Services, BTech Computer Engineering 2022",
-      message: "I’m truly grateful to Dr. Anup Ingale from the Computer Science department for his constant guidance and mentorship. His support was instrumental in helping me secure my internship, and his advice has had a lasting impact on my academic and professional growth."
+      message: "I’m truly grateful to Dr. Anup Ingle from the Computer Science department for his constant guidance and mentorship. His support was instrumental in helping me secure my internship, and his advice has had a lasting impact on my academic and professional growth."
     },
     {
       name: "Abhishek Mallav",
@@ -520,7 +520,7 @@ const testimonials = {
     {
       name: "Piyush Bali",
       designation: "Senior Software Engineer, eQTechnologic Pvt Ltd, CSE 2022",
-      message: "Dr. Anup Ingale was the first to spark my interest in programming. His guidance, encouragement for research, and the platform he created for competitive programming shaped both my skills and confidence. Under his guidance, I was able to create an environment for competitive programming in college."
+      message: "Dr. Anup Ingle was the first to spark my interest in programming. His guidance, encouragement for research, and the platform he created for competitive programming shaped both my skills and confidence. Under his guidance, I was able to create an environment for competitive programming in college."
     },
     {
       name: "Vaishnav Gonare",
@@ -760,10 +760,10 @@ function AcademicPortfolio() {
                   className="inline-block min-w-[280px] max-w-sm bg-white border border-amber-200 rounded-xl p-4 shadow-sm"
                 >
                   <p className="text-yellow-800 text-sm">{testimonial.message}</p>
-                  <p className='font-semibold text-yellow-900 mt-2'>{testimonial.name}</p>
+                  <p className='text-black-700 text-90 italic mt-2'>{testimonial.designation}</p>
                   <div className="flex items-center gap-2 mt-2">
                     
-                    <span className="text-yellow-700 text-xs">{testimonial.designation}</span>
+                    <span className="font-semibold text-yellow-900 mt-2">{testimonial.name}</span>
                   </div>
                 </div>
               ))}
@@ -781,10 +781,10 @@ function AcademicPortfolio() {
                   className="inline-block min-w-[280px] max-w-sm bg-white border border-amber-200 rounded-xl p-4 shadow-sm"
                 >
                   <p className="text-yellow-800 text-sm">{testimonial.message}</p>
-                  <p className='font-semibold text-yellow-900 mt-2'>{testimonial.name}</p>
+                  <p className='text-black-800 text-90 italic mt-2'>{testimonial.designation}</p>
                   <div className="flex items-center gap-2 mt-2">
                    
-                    <span className="text-yellow-700 text-xs">{testimonial.designation}</span>
+                    <span className="font-semibold text-yellow-900 mt-2">{testimonial.name}</span>
                   </div>
                 </div>
               ))}
