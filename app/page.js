@@ -760,7 +760,7 @@ function AcademicPortfolio() {
                   className="inline-block min-w-[280px] max-w-sm bg-white border border-amber-200 rounded-xl p-4 shadow-sm"
                 >
                   <p className="text-yellow-800 text-sm">{testimonial.message}</p>
-                  <p className='font-semibold text-yellow-900'>{testimonial.name}</p>
+                  <p className='font-semibold text-yellow-900 mt-2'>{testimonial.name}</p>
                   <div className="flex items-center gap-2 mt-2">
                     
                     <span className="text-yellow-700 text-xs">{testimonial.designation}</span>
@@ -781,7 +781,7 @@ function AcademicPortfolio() {
                   className="inline-block min-w-[280px] max-w-sm bg-white border border-amber-200 rounded-xl p-4 shadow-sm"
                 >
                   <p className="text-yellow-800 text-sm">{testimonial.message}</p>
-                  <p className='font-semibold text-yellow-900'>{testimonial.name}</p>
+                  <p className='font-semibold text-yellow-900 mt-2'>{testimonial.name}</p>
                   <div className="flex items-center gap-2 mt-2">
                    
                     <span className="text-yellow-700 text-xs">{testimonial.designation}</span>
